@@ -1,34 +1,48 @@
+ears
+How to show 'console.log's on a HTML page?
+I completed the task, and wondered how it would look on my HTML website. So I created a page and inserted the javascript, as shown in here. The dialog boxes appear without an error, and ask the prompts. But the storyline in ‘console.log’s does not show up anywhere. I’m adding the whole HTML code below, please help. Thanks in advance.
+
 <html>
-<head>
-  <title>hello</title>
-</head>
-<body>
-  <h1>hi test</h1>
-<h3>messages</h3>
-<ul class="msg"></ul>
-  <script>
-    console.log('test');
-
-let d = hello;
-console.log(d);
-
-alert('hello')
-prompt('test');
-function decorator(wrap, func) {
-  return (...para) => {
-    func(para)
-    return wrap(para)
-  }
-}
-
-const mylog = decorator(window.console.log, (...para)=>{
-  const ul = document.querySelector(`ul[class=msg]`)
-  const range = document.createRange()
-  const frag = range.createContextualFragment(`<li>${para}</li>`)
-  ul.append(frag)
-})
-
-mylog("Hello world!")
-  </script>
-</body>
+    <head>
+        <meta content="text/html; charset=windows-1252"
+          http-equiv="Content-Type">
+        <title>Javascript Game</title>
+        <script language="javascript">
+            alert("Hi there, now we will play a little game. Don't expect too much, 
+                    it's my first product after Javascript training.");
+            confirm("Let's get started! Click 'OK'");
+            var age = prompt("How old are you?");
+            if (age < 18 ) {
+                console.log("Even if you are under 18, you can still play this game, but by proceeding to the game, you agree that the developer of this game is not responsible for possibly obtrusive content.");
+            }
+            else {
+                console.log("You're old enough to enjoy this game! Here it goes:");
+            }
+            console.log("Snow White and Batman were hanging out at the bus stop, waiting to go to the shops. There was a sale on and both needed some new threads. You've never really liked Batman. You walk up to him.");
+            console.log("Batman glares at you.");
+            var userAnswer = prompt("Are you feeling lucky, punk?");
+            if (userAnswer === "yes") {
+                console.log("Batman hits you very hard. It's Batman and you're you! Of course Batman wins!");
+            }
+            else {
+                console.log("You did not say yes to feeling lucky. Good choice! You are a winner in the game of not getting beaten up by Batman.");
+            }
+            var feedback = prompt("Your feedback is valuable! On a scale of 1 to 10, where 10 is perfect, how good was our game?");
+            if (feedback > 8) {
+                console.log("This is just the beginning of my game empire. Stay tuned for more!");
+            }
+            else {
+                console.log("I slaved away at this game and you gave me that score?! The nerve! Just you wait!");
+            }
+        </script>
+    </head>
+    <body alink="#EE0000" bgcolor="#66cccc" link="#0000EE" text="#000000"
+        vlink="#551A8B">
+        <h1> <font color="#ffffff">MY FIRST GAME <br>
+            </font></h1>
+        <h1><font color="#ffffff">PRODUCED WITH JAVASCRIPT, <br>
+            </font></h1>
+        <h1><font color="#ffffff">ENJOY IT!</font></h1>
+    </body>
 </html>
+
